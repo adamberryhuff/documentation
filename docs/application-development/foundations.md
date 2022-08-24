@@ -3667,7 +3667,7 @@ The following examples show how to get the results of a Workflow Execution throu
 
 If you need to wait for a Workflow Execution to complete after an asynchronous start, the most straightforward way is to call the blocking Workflow instance again.
 
-Note that if `WorkflowOptions.WorkflowIdReusePolicy` is not set to `AllowDuplicate`, then instead of throwing `DuplicateWorkflowException`, it reconnects to an existing Workflow and waits for its completion.
+Note that if `WorkflowOptions.WorkflowIdReusePolicy` is not set to `AllowDuplicate`, then instead of throwing `WorkflowExecutionAlreadyStarted`, it reconnects to an existing Workflow and waits for its completion.
 
 The following example shows how to do this from a different process than the one that started the Workflow Execution.
 
